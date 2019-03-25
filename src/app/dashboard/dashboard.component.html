@@ -1,0 +1,15 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  <a class="navbar-brand" href="#"><span style="color:white">GOLDY'S</span><span style="color:red">GYM</span></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto"></ul>
+      <form class="form-inline my-lg-0">
+        <a class="nav-link" routerLink="/signup" routerLinkActive="active" *ngIf="!currentstatus.status">Signup</a>
+        <a class="nav-link" routerLink="/login" *ngIf="!currentstatus.status">Login</a>
+        <a class="nav-link" routerLink="/login" (click)="logout()" *ngIf="currentstatus.status">Logout</a>
+       </form>
+       </div>
+</nav>
